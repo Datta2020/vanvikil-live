@@ -3,11 +3,12 @@ import Navbar from 'react-bootstrap/lib/Navbar';
 import Nav from 'react-bootstrap/lib/Nav';
 import NavItem from 'react-bootstrap/lib/NavItem';
 import { IndexLinkContainer } from 'react-router-bootstrap';
+import Icon from 'react-fa'
 
 export default class GlobalNav extends Component {
     render() {
         return (
-            <Navbar>
+            <Navbar inverse>
                 <Navbar.Header>
                     <Navbar.Brand>
                         <IndexLinkContainer to="/">
@@ -19,19 +20,29 @@ export default class GlobalNav extends Component {
                 <Navbar.Collapse>
                     <Nav>
                         <IndexLinkContainer to="/">
-                            <NavItem eventKey={1} href="/">{'Live'}</NavItem>
+                            <NavItem eventKey={1} href="/">
+                                <Icon name="futbol-o" />{' Live'}
+                            </NavItem>
                         </IndexLinkContainer>
                         <IndexLinkContainer to="/stats">
-                            <NavItem eventKey={2} href="/stats">{'Stats'}</NavItem>
+                            <NavItem eventKey={2} href="/stats">
+                                <Icon name="bar-chart" />{' Stats'}
+                            </NavItem>
                         </IndexLinkContainer>
                         <IndexLinkContainer to="/spillerstall">
-                            <NavItem eventKey={3} href="/spillerstall">{'Spillerstall'}</NavItem>
+                            <NavItem eventKey={3} href="/spillerstall">
+                                <Icon name="users" />{' Spillerstall'}
+                            </NavItem>
                         </IndexLinkContainer>
                         <IndexLinkContainer to="/a-lag">
-                            <NavItem eventKey={4} href="/a-lag">{'A-lag'}</NavItem>
+                            <NavItem eventKey={4} href="/a-lag">
+                                <Icon name="plus-square" />{' A-lag'}
+                            </NavItem>
                         </IndexLinkContainer>
                         <IndexLinkContainer to="/b-lag">
-                            <NavItem eventKey={5} href="/b-lag">{'B-lag'}</NavItem>
+                            <NavItem eventKey={5} href="/b-lag">
+                                <Icon name="square" />{' B-lag'}
+                            </NavItem>
                         </IndexLinkContainer>
                     </Nav>
                 </Navbar.Collapse>

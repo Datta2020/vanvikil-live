@@ -1,6 +1,11 @@
 // Override icon-font-path value and include scss
 $icon-font-path: "~bootstrap-sass/assets/fonts/bootstrap/";
 
+@import "variables";
+
+$web-font-path: "https://fonts.googleapis.com/css?family=Roboto:300,400,500,700" !default;
+@import url($web-font-path);
+
 // Core variables and mixins
 @import "~bootstrap-sass/assets/stylesheets/bootstrap/variables";
 @import "~bootstrap-sass/assets/stylesheets/bootstrap/mixins";
@@ -8,7 +13,9 @@ $icon-font-path: "~bootstrap-sass/assets/fonts/bootstrap/";
 // Reset and dependencies
 @import "~bootstrap-sass/assets/stylesheets/bootstrap/normalize";
 @import "~bootstrap-sass/assets/stylesheets/bootstrap/print";
-@import "~bootstrap-sass/assets/stylesheets/bootstrap/glyphicons";
+
+// Using Font Awesome instead
+// @import "~bootstrap-sass/assets/stylesheets/bootstrap/glyphicons";
 
 // Core CSS
 @import "~bootstrap-sass/assets/stylesheets/bootstrap/scaffolding";

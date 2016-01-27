@@ -12,12 +12,8 @@ module.exports = {
     },
     loaders: [
         {
-            test: /\.(jpe?g|png|gif|svg|eot|ttf|mp3)$/,
-            loader: 'file'
-        },
-        {
-            test: /\.woff(2)?(\?v=[0-9]\.[0-9]\.[0-9])?$/,
-            loader: 'url?limit=10000&minetype=application/font-woff'
+            test: /\.(jpg|jpeg|png|gif|svg|mp3|otf|eot|svg|ttf|woff|woff2)(\?.+)?$/,
+            loader: 'url-loader?limit=8192'
         },
         {
             test: /\.js$/,
@@ -27,6 +23,10 @@ module.exports = {
         {
             test: /\.scss$/,
             loader: 'style!css!sass'
+        },
+        {
+            test: /\.css$/,
+            loader: 'style!css'
         }
     ],
     resolve: {
