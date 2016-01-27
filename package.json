@@ -1,0 +1,52 @@
+{
+  "name": "vanvikil-live",
+  "version": "0.0.0",
+  "description": "Vanvik IL Live made with React and Redux",
+  "main": "src/index.js",
+  "scripts": {
+    "clean": "rimraf public",
+    "build:webpack": "NODE_ENV=production webpack --config ./webpack/prod.config.js",
+    "build": "npm run clean && npm run build:webpack",
+    "start": "node server.js",
+    "start:dev": "NODE_ENV=development nodemon --watch server.js --watch webpack server.js",
+    "lint": "eslint src webpack server",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kennethaa/vanvikil-live.git"
+  },
+  "keywords": [
+    "livescore"
+  ],
+  "author": "Kenneth Aasan",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/kennethaa/vanvikil-live/issues"
+  },
+  "homepage": "https://github.com/kennethaa/vanvikil-live#readme",
+  "dependencies": {
+    "bootstrap-sass": "^3.3.6",
+    "compression": "^1.6.1",
+    "express": "^4.13.4",
+    "react": "^0.14.6",
+    "react-bootstrap": "^0.28.2",
+    "react-dom": "^0.14.6",
+    "react-router": "^2.0.0-rc5",
+    "react-router-bootstrap": "^0.20.1"
+  },
+  "devDependencies": {
+    "css-loader": "^0.23.1",
+    "eslint": "^1.10.3",
+    "eslint-config-airbnb": "^4.0.0",
+    "eslint-plugin-react": "^3.16.1",
+    "file-loader": "^0.8.5",
+    "node-sass": "^3.4.2",
+    "sass-loader": "^3.1.2",
+    "style-loader": "^0.13.0",
+    "url-loader": "^0.5.7",
+    "webpack": "^1.12.12",
+    "webpack-dev-middleware": "^1.5.1",
+    "webpack-hot-middleware": "^2.6.4"
+  }
+}
