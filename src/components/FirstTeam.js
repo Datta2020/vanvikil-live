@@ -9,7 +9,3 @@ export default class FirstTeam extends Component {
         );
     }
 }
-
-// App.propTypes = {
-//     children: PropTypes.object
-// };

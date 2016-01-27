@@ -9,7 +9,3 @@ export default class SecondTeam extends Component {
         );
     }
 }
-
-// App.propTypes = {
-//     children: PropTypes.object
-// };

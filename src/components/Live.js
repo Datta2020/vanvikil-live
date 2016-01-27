@@ -9,7 +9,3 @@ export default class Live extends Component {
         );
     }
 }
-
-// App.propTypes = {
-//     children: PropTypes.object
-// };

@@ -9,7 +9,3 @@ export default class Squad extends Component {
         );
     }
 }
-
-// App.propTypes = {
-//     children: PropTypes.object
-// };

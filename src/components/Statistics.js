@@ -9,7 +9,3 @@ export default class Statistics extends Component {
         );
     }
 }
-
-// App.propTypes = {
-//     children: PropTypes.object
-// };
