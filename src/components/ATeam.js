@@ -1,11 +1,13 @@
 import React, { Component } from 'react';
 
-export default class SecondTeam extends Component {
+export default class ATeam extends Component {
     render() {
         return (
             <div>
-                {'B-lag'}
+                {'A-lag'}
             </div>
         );
     }
 }
+
+export default ATeam;

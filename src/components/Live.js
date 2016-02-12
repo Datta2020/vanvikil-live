@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import Icon from 'react-fa'
 
-export default class Live extends Component {
+class Live extends Component {
     render() {
         return (
             <div>
@@ -12,3 +12,5 @@ export default class Live extends Component {
         );
     }
 }
+
+export default Live;
