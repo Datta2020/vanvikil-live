@@ -1,13 +1,17 @@
 import React, { Component, PropTypes } from 'react';
+import { connect } from 'react-redux';
 import GlobalNav from './nav/GlobalNav';
+import Loading from './helpers/Loading';
 
 class App extends Component {
     render() {
-        const { children } = this.props;
+        const { children, options } = this.props;
+
         return (
             <div>
                 <GlobalNav />
                 <div className="container">
+                    {options.loading && <Loading />}
                     {children}
                 </div>
             </div>
@@ -16,7 +20,14 @@ class App extends Component {
 }
 
 App.propTypes = {
-    children: PropTypes.node
+    children: PropTypes.node,
+    options: PropTypes.object.isRequired
 };
 
-export default App;
+function mapStateToProps({ options }) {
+    return {
+        options
+    };
+}
+
+export default connect(mapStateToProps)(App);

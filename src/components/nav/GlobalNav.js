@@ -3,7 +3,7 @@ import Navbar from 'react-bootstrap/lib/Navbar';
 import Nav from 'react-bootstrap/lib/Nav';
 import NavItem from 'react-bootstrap/lib/NavItem';
 import { IndexLinkContainer } from 'react-router-bootstrap';
-import Icon from 'react-fa'
+import Icon from 'react-fa';
 
 export default class GlobalNav extends Component {
     render() {

@@ -28,20 +28,7 @@ if (process.env.NODE_ENV === 'development') {
 app.use(express.static(path.join(__dirname, 'public')));
 
 app.get('*', (req, res) => {
-    res.status(200).send(
-`
-<!doctype html>
-<html lang="no">
-    <head>
-        <meta charset="utf-8">
-        <title>Vanvik IL Live & Stats</title>
-    </head>
-    <body>
-        <div id="app"></div>
-        <script src="/assets/app.js"></script>
-    </body>
-</html>
-`);
+    res.status(200).sendFile(path.join(__dirname, 'public/index.html'));
 });
 
 // Generic server errors
