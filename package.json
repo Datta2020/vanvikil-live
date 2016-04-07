@@ -7,7 +7,7 @@
     "clean": "rimraf ./public/assets",
     "build:webpack": "NODE_ENV=production webpack --config ./webpack/prod.config.js",
     "build": "npm run clean && npm run build:webpack",
-    "start": "node server.js",
+    "start": "NODE_ENV=production node server.js",
     "start:dev": "NODE_ENV=development nodemon --watch server.js --watch webpack server.js",
     "lint": "eslint src webpack server",
     "test": "echo \"Error: no test specified\" && exit 1"

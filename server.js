@@ -37,12 +37,16 @@ app.use((err, req, res, next) => { // eslint-disable-line no-unused-vars
     console.error(err.stack);
 
     if (app.get('env') === 'development') {
-        res.status(500).send(err.stack);
+        return res.status(500).send(err.stack);
     }
-    else res.sendStatus(500);
+
+    return res.sendStatus(500);
 });
 
-app.listen(port, 'localhost', (err) => {
-    if (err) return console.error(err);
-    console.log(`Server listening on http://localhost:${port}, Ctrl+C to stop`);
+app.listen(port, (err) => {
+    if (err) {
+        return console.error(err);
+    }
+
+    return console.log(`Server listening on ${port}`);
 });
