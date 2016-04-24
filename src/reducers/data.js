@@ -6,12 +6,12 @@ import {
 export default function data(state = {}, action) {
     switch (action.type) {
 
-    case RECEIVE_FEED:
-        return assign({}, state, {
-            [action.feed]: action.json
-        });
+        case RECEIVE_FEED:
+            return assign({}, state, {
+                [action.feed]: action.json
+            });
 
-    default:
-        return state;
+        default:
+            return state;
     }
 }
